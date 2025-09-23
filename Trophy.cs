@@ -38,8 +38,8 @@
             get => _year;
             set
             {
-                if (value < 1970 || value > 2025)
-                    throw new ArgumentOutOfRangeException(nameof(Year), "Year skal være mellem 1970 og 2025 (inklusive).");
+                if (value <= 1970 || value >= 2025)
+                    throw new ArgumentOutOfRangeException(nameof(Year), "Year skal være mellem 1970 og 2025");
 
                 _year = value;
             }
@@ -55,10 +55,7 @@
         // tom konstruktør 
         public Trophy() { }
 
-        public Trophy(Trophy found)
-        {
-            this.found = found;
-        }
+       
 
         // ToString override
         public override string ToString()
