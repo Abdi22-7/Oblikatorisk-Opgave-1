@@ -7,6 +7,7 @@
         private int _id;
         private string _competition;
         private int _year;
+        private Trophy found;
 
         public int Id
         {
@@ -53,6 +54,11 @@
 
         // tom konstruktør 
         public Trophy() { }
+
+        public Trophy(Trophy found)
+        {
+            this.found = found;
+        }
 
         // ToString override
         public override string ToString()
