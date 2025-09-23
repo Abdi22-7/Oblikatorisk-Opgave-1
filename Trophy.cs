@@ -38,7 +38,7 @@
             get => _year;
             set
             {
-                if (value <= 1970 || value >= 2025)
+                if (value < 1970 || value > 2025)
                     throw new ArgumentOutOfRangeException(nameof(Year), "Year skal være mellem 1970 og 2025");
 
                 _year = value;
