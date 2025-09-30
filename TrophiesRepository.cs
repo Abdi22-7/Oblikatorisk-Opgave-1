@@ -1,7 +1,7 @@
 ﻿namespace Oblikatorisk_Opgave_1
 {
 
-    public class TrophiesRepository
+    public class TrophiesRepository : ITrophies
     {
         private readonly List<Trophy> _trophies;
 
